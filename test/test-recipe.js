@@ -77,9 +77,7 @@ chai.use(chaiHttp);
 					})
 					.then(function(res){
 						expect(res).to.have.status(204);
-						expect(res).to.be.json;
-						expect(res.body).to.be.a('object');
-						expect(res.body).to.deep.equal(updateItem);
+						expect(res.body).to.deep.equal({});
 					})
 				);
 			});
